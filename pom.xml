@@ -6,7 +6,16 @@
 	
 	<groupId>org.example</groupId>
 	<artifactId>kafka-application</artifactId>
+	<packaging>pom</packaging>
 	<version>1.0-SNAPSHOT</version>
+	
+	<modules>
+		<module>common-kafka</module>
+		<module>service-email</module>
+		<module>service-fraud-detector</module>
+		<module>service-log</module>
+		<module>service-new-order</module>
+	</modules>
 	
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
