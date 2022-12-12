@@ -10,10 +10,9 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.Properties;
 import java.util.UUID;
-import java.util.concurrent.ExecutionException;
 import java.util.regex.Pattern;
 
-class KafkaService<T> implements Closeable {
+public class KafkaService<T> implements Closeable {
 
     private final KafkaConsumer<String, T> consumer;
     private final ConsumerFunction parse;
@@ -41,9 +40,7 @@ class KafkaService<T> implements Closeable {
                 for (var record : records) {
                     try {
                         parse.consume(record);
-                    } catch (ExecutionException e) {
-                        throw new RuntimeException(e);
-                    } catch (InterruptedException e) {
+                    } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
                 }
