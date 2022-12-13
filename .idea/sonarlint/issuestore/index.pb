@@ -25,6 +25,3 @@ l
 <common-kafka/src/main/java/org/example/ConsumerFunction.java,9\9\99c1019ed98d7065c811750a9903cfdc8beaf74e
 h
 8common-kafka/src/main/java/org/example/KafkaService.java,c\b\cb1f1cfafc7880ab4e4087f018606d5ec370ca65
-:
-
-.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
